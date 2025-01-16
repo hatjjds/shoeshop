@@ -49,7 +49,7 @@ phases:
       - echo "Build Docker image."
       - docker build -t $IMAGE_NAME:$IMAGE_TAG .
       - echo "Tag Docker image."
-      - docker tag $IMAGE_NAME:$IMAGE_TAG $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+      - docker tag $IMAGE_NAME:$IMAGE_TAG $DOCKERHUB_REPONAME/$IMAGE_NAME:$IMAGE_TAG
       -  echo "Docker build successful."
   post_build:
     commands:
