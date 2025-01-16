@@ -54,7 +54,7 @@ phases:
   post_build:
     commands:
       - echo "Push Docker image to Docker Hub."
-      - docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_TAG
+      - docker push $DOCKERHUB_REPONAME/$IMAGE_NAME:$IMAGE_TAG
       - echo "Docker image pushed successfully."
 
 env:
@@ -63,6 +63,7 @@ env:
     IMAGE_TAG: "latest"                
     DOCKERHUB_USERNAME: "bmqagx2@gmail.com"   
     DOCKERHUB_PASSWORD: "Bmquang#432002"   
-
+    DOCKERHUB_REPONAME: "hatjjds"
+    
 artifacts:
   discard-paths: yes
